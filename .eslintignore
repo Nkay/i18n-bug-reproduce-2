@@ -1,0 +1,7 @@
+*.js
+README.md
+*.json
+*.css
+*.mjs
+env.d.ts
+pages/de/*

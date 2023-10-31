@@ -1,0 +1,27 @@
+---
+import { astroI18n } from 'astro-i18n';
+import Navbar from '../elements/navbar.astro';
+import Footer from '../elements/landingpage/footer.astro';
+import '../css/index.css';
+import CommonHead from '../components/CommonHead.astro';
+
+astroI18n.init(Astro);
+const { title, topMargin = true, darkNavBar = true } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang={astroI18n.langCode}>
+  <CommonHead title={title}/>
+  <body class="light">
+    <Navbar darkNavBar={darkNavBar}/>
+    {topMargin && <div class="mt-32" />}
+    <slot/>
+    <Footer/>
+  </body>
+</html>
+<style is:global>
+  :root {
+  }
+
+  html {
+  }
+</style>
