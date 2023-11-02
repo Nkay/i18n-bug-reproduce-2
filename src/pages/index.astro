@@ -1,18 +1,10 @@
 ---
-import { t } from 'astro-i18n';
-
+import { astroI18n, t } from 'astro-i18n';
 import Layout from '../layouts/Layout.astro';
-import Startnow from '../elements/startnow.astro';
-import Integrations from '../elements/landingpage/integrations.astro';
-import Socialproof from '../elements/landingpage/reference.astro';
-import Features from '../elements/landingpage/features.astro';
-import Hero from '../elements/landingpage/hero.astro';
-import '../css/index.css';
+
 ---
-<Layout title={t('title')} topMargin={false} darkNavBar={false}>
+<Layout>
   <main class="bg-layer-1">
-
-    test
-
+    {t('test')}
   </main>
 </Layout>

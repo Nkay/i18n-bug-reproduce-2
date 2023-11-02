@@ -201,6 +201,8 @@ declare module "astro-i18n" {
 		extractRouteLocale(route: string): string|null
 		/** Initializes astro-i18n on the server-side. */
 		initialize(config?: Partial<AstroI18nConfig> | string, formatters?: TranslationFormatters = {}): Promise<void>
+		/** Redirects the user to the given destination. */
+		redirect(destination: string | URL, status = 301)
 	}
 	export const astroI18n: AstroI18n
 }
